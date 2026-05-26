@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://pycvx3o3vucr"]
 
+[ext_resource type="Script" uid="uid://dgi5wtxtqdct" path="res://Scripts/level.gd" id="1_81xng"]
 [ext_resource type="Script" uid="uid://cixy0ypfp41th" path="res://Scripts/player.gd" id="1_k5f4k"]
 [ext_resource type="Texture2D" uid="uid://yg2jexow6bay" path="res://Assets/icon.svg" id="2_6phgx"]
-[ext_resource type="PackedScene" uid="uid://b1tn10fd0oqaq" path="res://Scenes/Bubble.tscn" id="3_6phgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtcfe"]
 size = Vector2(128, 128)
@@ -20,6 +20,7 @@ size = Vector2(1152.5, 45)
 size = Vector2(644, 60)
 
 [node name="Level" type="Node2D" unique_id=1128641664]
+script = ExtResource("1_81xng")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=292705392]
 position = Vector2(557, 220)
@@ -50,9 +51,6 @@ position = Vector2(1182, 323)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_f2txt")
 
-[node name="Bubble" parent="." unique_id=394733056 instance=ExtResource("3_6phgx")]
-position = Vector2(514, 395)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=764255338]
 
 [node name="OxygenLabel" type="Label" parent="CanvasLayer" unique_id=913124434]
@@ -60,3 +58,14 @@ offset_left = 18.0
 offset_top = 18.0
 offset_right = 126.0
 offset_bottom = 46.0
+
+[node name="BubbleSpawnPoints" type="Node2D" parent="." unique_id=1733056066]
+
+[node name="Marker2D" type="Marker2D" parent="BubbleSpawnPoints" unique_id=1866388346]
+position = Vector2(1041, 308)
+
+[node name="Marker2D2" type="Marker2D" parent="BubbleSpawnPoints" unique_id=789200643]
+position = Vector2(784, 276)
+
+[node name="Marker2D3" type="Marker2D" parent="BubbleSpawnPoints" unique_id=1650077394]
+position = Vector2(239, 321)
