@@ -34,7 +34,7 @@ shape = SubResource("RectangleShape2D_wtcfe")
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1706237096]
 
 [node name="TopRoom" type="CollisionShape2D" parent="Walls" unique_id=1284006884]
-position = Vector2(576.5, -29)
+position = Vector2(576, -27)
 shape = SubResource("RectangleShape2D_vonw3")
 
 [node name="LeftRoom" type="CollisionShape2D" parent="Walls" unique_id=1653529113]
@@ -52,3 +52,11 @@ shape = SubResource("RectangleShape2D_f2txt")
 
 [node name="Bubble" parent="." unique_id=394733056 instance=ExtResource("3_6phgx")]
 position = Vector2(514, 395)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=764255338]
+
+[node name="OxygenLabel" type="Label" parent="CanvasLayer" unique_id=913124434]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 126.0
+offset_bottom = 46.0

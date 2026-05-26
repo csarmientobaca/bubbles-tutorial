@@ -7,6 +7,8 @@ var JUMP_VELOCITY = -400.0
 
 var myGravity = 5
 
+@onready var oxygen_label = $"../CanvasLayer/OxygenLabel"
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -29,7 +31,7 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	timeLeft -= delta
 
-	print(timeLeft)
+	oxygen_label.text = "Oxygen: " + str(int(timeLeft))
 
 	if timeLeft <= 0:
 		die()
