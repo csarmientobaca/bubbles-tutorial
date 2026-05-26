@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://pycvx3o3vucr"]
 
-[ext_resource type="Texture2D" uid="uid://yg2jexow6bay" path="res://Assets/icon.svg" id="1_u52ul"]
-[ext_resource type="Script" uid="uid://cixy0ypfp41th" path="res://player.gd" id="1_vonw3"]
+[ext_resource type="Script" uid="uid://cixy0ypfp41th" path="res://Scripts/player.gd" id="1_k5f4k"]
+[ext_resource type="Texture2D" uid="uid://yg2jexow6bay" path="res://Assets/icon.svg" id="2_6phgx"]
+[ext_resource type="PackedScene" uid="uid://b1tn10fd0oqaq" path="res://Scenes/Bubble.tscn" id="3_6phgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtcfe"]
 size = Vector2(128, 128)
@@ -22,10 +23,10 @@ size = Vector2(644, 60)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=292705392]
 position = Vector2(557, 220)
-script = ExtResource("1_vonw3")
+script = ExtResource("1_k5f4k")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=943989174]
-texture = ExtResource("1_u52ul")
+texture = ExtResource("2_6phgx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1190817622]
 shape = SubResource("RectangleShape2D_wtcfe")
@@ -48,3 +49,6 @@ shape = SubResource("RectangleShape2D_0b4ue")
 position = Vector2(1182, 323)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_f2txt")
+
+[node name="Bubble" parent="." unique_id=394733056 instance=ExtResource("3_6phgx")]
+position = Vector2(514, 395)

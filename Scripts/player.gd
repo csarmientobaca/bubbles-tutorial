@@ -25,3 +25,19 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	timeLeft -= delta
+
+	print(timeLeft)
+
+	if timeLeft <= 0:
+		die()
+
+func add_oxygen(amount) -> void:
+	timeLeft += amount
+
+func die() -> void:
+	print("Player died")
+	get_tree().reload_current_scene()
+	
