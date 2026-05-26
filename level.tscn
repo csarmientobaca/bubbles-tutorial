@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://pycvx3o3vucr"]
+
+[ext_resource type="Texture2D" uid="uid://yg2jexow6bay" path="res://Assets/icon.svg" id="1_u52ul"]
+[ext_resource type="Script" uid="uid://cixy0ypfp41th" path="res://player.gd" id="1_vonw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtcfe"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
+size = Vector2(1151, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
+size = Vector2(52, 646)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4ue"]
+size = Vector2(1152.5, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2txt"]
+size = Vector2(644, 60)
+
+[node name="Level" type="Node2D" unique_id=1128641664]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=292705392]
+position = Vector2(557, 220)
+script = ExtResource("1_vonw3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=943989174]
+texture = ExtResource("1_u52ul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1190817622]
+shape = SubResource("RectangleShape2D_wtcfe")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1706237096]
+
+[node name="TopRoom" type="CollisionShape2D" parent="Walls" unique_id=1284006884]
+position = Vector2(576.5, -29)
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="LeftRoom" type="CollisionShape2D" parent="Walls" unique_id=1653529113]
+position = Vector2(-27, 324)
+shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="BottomRoom" type="CollisionShape2D" parent="Walls" unique_id=91904501]
+position = Vector2(577.75, 670)
+shape = SubResource("RectangleShape2D_0b4ue")
+
+[node name="RightRoom" type="CollisionShape2D" parent="Walls" unique_id=492497744]
+position = Vector2(1182, 323)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_f2txt")
