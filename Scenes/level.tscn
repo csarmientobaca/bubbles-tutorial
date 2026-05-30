@@ -59,6 +59,10 @@ offset_top = 18.0
 offset_right = 126.0
 offset_bottom = 46.0
 
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=923174970]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="BubbleSpawnPoints" type="Node2D" parent="." unique_id=1733056066]
 
 [node name="Marker2D" type="Marker2D" parent="BubbleSpawnPoints" unique_id=1866388346]
